@@ -22,11 +22,10 @@ vec4 mx(vec4 color1, vec4 color2, float grad) {
 	return mix(color1, color2, fract(grad * 1/portion));
 }
 
-// NO FUNCIONA MUY BIEN :(
 void main()
 {
 	vec4 fbm = texture(fbm, vtexCoord);
-	float grad =1* /*A*/ sin(0.1 /*f*/ * time + (2*pi*fbm.r) /*phi*/);
+	float grad =1* /*A*/ sin(2 * pi * 0.1 /*f*/ * time + (2*pi*fbm.r) /*phi*/);
 	grad += 1; // para convertirlo en [0,2]
 	if(grad == 0) {
 		fragColor = RED;
