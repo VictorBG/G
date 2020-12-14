@@ -1,2 +1,2 @@
-TARGET     = $$qtLibraryTarget(Volume22)
+TARGET     = $$qtLibraryTarget(Volume16)
 include(../common.pro)
